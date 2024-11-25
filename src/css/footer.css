@@ -1,0 +1,34 @@
+.footer {
+	background-color: var(--primary);
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.footer-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	align-items: center;
+}
+
+.footer-links li {
+	display: inline;
+}
+
+.footer-links a {
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+}
+
+.footer-links a:hover {
+	text-decoration: underline;
+}
+
+.footer-links li:nth-child(odd) {
+	font-size: 16px;
+}

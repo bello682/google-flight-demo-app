@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Modal from "./components/reusable-modal-component/modalComponent";
+import Navbar from "./pages/navbar-footer/navbar";
+import HeroComponent from "./components/re-usable-hero-section-component/heroComponent";
+import Footer from "./pages/navbar-footer/footer";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [isModalOpen, setModalOpen] = useState(false);
+
+	const openModal = () => setModalOpen(true);
+	const closeModal = () => setModalOpen(false);
+
+	useEffect(() => {
+		openModal();
+	}, []);
+	return (
+		<div>
+			<Navbar />
+
+			<Modal
+				isOpen={isModalOpen}
+				onClose={closeModal}
+				customClass="custom-large"
+			>
+				<h2>Welcome!</h2>
+				<p>This modal appears on page load.</p>
+				<button onClick={closeModal}>Close Modal</button>
+			</Modal>
+
+			<HeroComponent />
+
+			<Footer />
+		</div>
+	);
 }
 
 export default App;

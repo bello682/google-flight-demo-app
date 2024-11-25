@@ -1,0 +1,299 @@
+.background-hero-container {
+	width: 100%;
+	height: 50vh;
+	display: flex;
+	background-image: url("../asset//images//flightsearchdirectBackground1.jpg");
+	color: white;
+	/* background-image will be here */
+}
+
+.hero-center-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+.header-text {
+	font-size: 50px;
+	margin: auto;
+}
+
+.paragraph-text {
+	margin: auto auto 20px auto;
+	font-size: 20px;
+}
+
+.travel-content-form {
+	display: flex;
+	flex-direction: column;
+	background: transparent;
+	background: white;
+	padding: 20px !important;
+	border-radius: 10px;
+	margin: 10px 20px !important;
+}
+
+.check-box-div {
+	display: flex;
+	gap: 5px;
+}
+
+.check-box-div input[type="checkbox"] {
+	margin: 10px;
+}
+
+.check-box-div label {
+	color: black;
+	font-size: 20px;
+}
+
+.travel-input-wrapper {
+	display: flex;
+}
+
+.Travel-Form-Input {
+	display: flex;
+}
+
+.date-time-input-travel {
+	display: flex;
+	gap: 10px;
+}
+.texts-input-travel {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	position: relative;
+}
+
+.texts-input-travel input {
+	padding: 25px 150px 25px 30px;
+	margin: 10px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+}
+
+.date-time-input-travel input {
+	padding: 20px;
+	margin: 10px;
+	border-radius: 10px;
+	width: 100%;
+	border: 1px solid #ccc;
+}
+
+.custom-search-button-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.Travel-Form-Input .custom-search-button {
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 900;
+	color: white;
+	padding: 16px 40px;
+	border-radius: 10px;
+	background: var(--primary);
+	cursor: pointer;
+	border: none;
+}
+
+.search_result_from,
+.search_result_to {
+	position: absolute;
+	top: 100%;
+}
+
+.search_result_from ul li,
+.search_result_to ul li {
+	text-decoration: none;
+	color: red;
+	list-style: none;
+	display: flex;
+	gap: 5px;
+}
+
+.search_result_from ul li p,
+.search_result_to ul li p {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+	margin: auto;
+}
+
+/*  */
+
+/* Suggestions container */
+
+.search_result_from {
+	list-style: none;
+	padding: 0;
+	margin: 5px 0 0;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	max-height: 200px;
+	overflow-y: auto;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	width: 200%;
+	z-index: 1000;
+}
+
+.search_result_to {
+	list-style: none;
+	padding: 0;
+	margin: 5px 0 0;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	max-height: 200px;
+	overflow-y: auto;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	width: 200%;
+	z-index: 1000;
+}
+
+/* Suggestion item */
+.airport-suggestion {
+	padding: 10px;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+	display: flex;
+	gap: 5px;
+	border-bottom: 1px solid black;
+	padding: 15px 5px;
+}
+
+.airport-suggestion:hover {
+	background-color: #f1f1f1;
+}
+
+/* Suggestion text */
+.suggestion-title {
+	color: black;
+	max-width: fit-content;
+}
+
+.suggestion-subtitle {
+	color: black;
+	max-width: fit-content;
+}
+
+.buttons_classes_adult {
+	display: flex;
+	gap: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.buttons_classes_adult_mobile_screen {
+	display: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.background-hero-container {
+		width: 100%;
+		height: auto;
+		background-image: url("../asset//images//flightsearchdirectBackground1.jpg");
+		color: white;
+		padding: 20px 5px;
+	}
+
+	.header-text {
+		font-size: 30px;
+		margin: 20px auto auto auto;
+		text-align: center;
+	}
+
+	.travel-input-wrapper {
+		display: flex;
+	}
+
+	.Travel-Form-Input {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.Travel-Form-Input .custom-search-button {
+		width: 100%;
+	}
+
+	.buttons_classes_adult_mobile_screen {
+		display: flex;
+	}
+
+	.buttons_classes_adult {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1334px) {
+	.background-hero-container {
+		width: 100%;
+		height: auto;
+		background-image: url("../asset//images//flightsearchdirectBackground1.jpg");
+		color: white;
+		padding: 20px 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.travel-content-form {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		background: transparent;
+		background: white;
+		padding: 20px !important;
+		border-radius: 10px;
+		margin: 10px 20px !important;
+	}
+
+	.travel-input-wrapper {
+		display: flex;
+		flex-direction: column;
+		/* width: 100%; */
+	}
+
+	.Travel-Form-Input {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.Travel-Form-Input .custom-search-button {
+		width: 100%;
+	}
+
+	.texts-input-travel input {
+		padding: 25px 150px 25px 30px;
+		margin: 10px;
+		border-radius: 10px;
+	}
+
+	.buttons_classes_adult_mobile_screen {
+		display: flex;
+	}
+
+	.buttons_classes_adult {
+		display: none;
+	}
+
+	.header-text {
+		font-size: 40px;
+		margin: auto;
+		text-align: center;
+	}
+}
