@@ -317,7 +317,10 @@ const HeroComponent = ({ custom_hero_styling }) => {
 	};
 
 	const handleSuggestionClick = (airport, setFunction, setSuggestions) => {
-		setFunction(airport?.country);
+		// Combine only the values of the airport object into a single string
+		// const formattedValue = Object.values(airport);
+		const formattedValue = Object.values(airport).join("  ");
+		setFunction(formattedValue);
 		setSuggestions([]);
 	};
 
